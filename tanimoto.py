@@ -29,5 +29,8 @@ for i in range(0,len(target)):
     sim = DataStructs.FingerprintSimilarity(fps[0],fps[1])
     df[str(target[i])]=[sim]
 
+
+df = df.transpose()
+
 df.to_csv("tanimoto_matrix.csv")
 
